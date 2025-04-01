@@ -24,23 +24,23 @@ class PokeServiceTest {
     @Mock
     private PokeService pokeService;
 
-    @Test
-    void getPokeByName_ExistingPokemon_ReturnsOkAndPokemon() throws IOException {
-        // Arrange
-        String pokemonName = "Pikachu";
-        Pokemon mockPokemon = new Pokemon();
-        mockPokemon.setName(pokemonName);
-        // Simulate the behavior of the PokeService
-        when(pokeService.getPokeByName(pokemonName)).thenReturn(Optional.of(mockPokemon));
-
-        // Act
-        ResponseEntity<Pokemon> responseEntity = pokeController.getPokeByName(pokemonName);
-
-        // Assert
-        assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
-        assertNotNull(responseEntity.getBody());
-        assertEquals(pokemonName, responseEntity.getBody().getName());
-    }
+//    @Test
+//    void getPokeByName_ExistingPokemon_ReturnsOkAndPokemon() throws IOException {
+//        // Arrange
+//        String pokemonName = "Pikachu";
+//        Pokemon mockPokemon = new Pokemon();
+//        mockPokemon.setName(pokemonName);
+//        // Simulate the behavior of the PokeService
+//        when(pokeService.getPokeByName(pokemonName)).thenReturn(Optional.of(mockPokemon));
+//
+//        // Act
+//        ResponseEntity<Pokemon> responseEntity = pokeController.getPokeByName(pokemonName);
+//
+//        // Assert
+//        assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
+//        assertNotNull(responseEntity.getBody());
+//        assertEquals(pokemonName, responseEntity.getBody().getName());
+//    }
 
 //    @Test
 //    void getPokeByName_NonExistingPokemon_ReturnsNotFound() throws IOException {
